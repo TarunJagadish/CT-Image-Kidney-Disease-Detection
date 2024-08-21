@@ -23,21 +23,38 @@ Before running the project, ensure you have the following installed:
 We split the dataset into training and testing folders in a 3:1 ratio (75% training, 25% testing) using the splitfolders library in Python. We then augmented the images using ImageDataGenerator from the Keras library in Python. Augmentation was done to add variation to the training data, which helps models to generalize better to new images. We implemented two different sets of augmentation techniques.
 Image Augmentation 1: The training dataset images were augmented by:
 • Rescaling the pixel values of the images between 0 and 1.
+
 • Shearing the images by a factor between 0 and 0.2
+
 • Zooming in or out of the images by a factor between 0 and 0.2
+
 • Randomly flipping the images horizontally and vertically
+
 • Rotating the images by an angle between -20 and 20 degrees
+
 • Shifting the images horizontally by 20% of their width
+
 • Shifting the images vertically by 20% of their height
+
 • Adjusting the brightness of the images by a factor between 0.2 and 1
+
 • Filling any gaps created by all the transformations with the nearest pixel value.
+
+
 Image Augmentation 2 The training dataset images were augmented by:
+
 • Rescaling the pixel values of the images between 0 and 1.
+
 • Randomly flipping the images horizontally and vertically
+
 • Rotating the images by an angle between -20 and 20 degrees
+
 • Shifting the images horizontally by 20% of their width
+
 • Shifting the images vertically by 20% of their height
+
 • Filling any gaps created by all the transformations with the nearest pixel value.
+
 The images of the testing dataset were augmented only by rescaling their pixel values between 0 and 1.
 
 ## Results and Conclusion
